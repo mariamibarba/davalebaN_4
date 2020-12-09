@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        tools:layout="@layout/fragment_home"
+        android:name="com.example.myapplication133.fragments.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_notification"
+            app:destination="@id/navigation_notification" />
+        <argument
+            android:name="amount" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        tools:layout="@layout/fragment_dashboard"
+        android:name="com.example.myapplication133.fragments.DashboardFragment"
+        android:label="DashboardFragment" >
+        <argument
+
+        />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_notification"
+        tools:layout="@layout/fragment_notification"
+        android:name="com.example.myapplication133.fragments.NotificationFragment"
+        android:label="NotificationFragment" >
+        <argument
+            android:name="amount"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_image"
+        tools:layout="@layout/fragment_image"
+        android:name="com.example.myapplication133.fragments.ImageFragment"
+        android:label="ImageFragment" />
+</navigation>
